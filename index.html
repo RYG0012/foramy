@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OLG 模型與 PAYG 制度筆記</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>OLG 模型與 PAYG 制度筆記</h1>
+
+      <section>
+        <h2>一、OLG 模型基本設定</h2>
+        <ul>
+          <li>每一代人分為「年輕期」與「老年期」，總共活兩期。</li>
+          <li>
+            人口每期以固定成長率 <strong>n</strong> 成長，也就是：<br />
+            下一期的人口 = (1 + n) × 本期人口。
+          </li>
+          <li>年輕人有收入 <strong>y</strong>，老年時不工作。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>二、效用最大化問題</h2>
+        <p>個人希望讓自己一生的效用最大化：</p>
+        <p>
+          <strong
+            >U = u(c<sub>t</sub><sup>年輕</sup>) + β × u(c<sub>t+1</sub
+            ><sup>老年</sup>)</strong
+          >
+        </p>
+        <p>條件限制：</p>
+        <ul>
+          <li>
+            年輕期：c<sub>t</sub><sup>年輕</sup> + s<sub>t</sub> =
+            y（收入要分配到當期消費與儲蓄）
+          </li>
+          <li>
+            老年期：c<sub>t+1</sub><sup>老年</sup> = (1 + r<sub>t+1</sub>) ×
+            s<sub>t</sub>（靠年輕時儲蓄及利息過活）
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>三、最適條件（Euler 方程式）</h2>
+        <p>最佳化會導出：</p>
+        <p>
+          <strong
+            >邊際效用（年輕期） = β × (1 + r<sub>t+1</sub>) ×
+            邊際效用（老年期）</strong
+          >
+        </p>
+      </section>
+
+      <section>
+        <h2>四、PAYG 制度的加入</h2>
+        <p>政府制度：</p>
+        <ul>
+          <li>每位年輕人繳稅 <strong>a</strong></li>
+          <li>每位老年人領取給付 <strong>b</strong></li>
+          <li>
+            政府不儲蓄，稅收直接發給老人 → 政府預算平衡：<br />
+            a × N<sub>t</sub> = b × N<sub>t-1</sub>
+          </li>
+          <li>整理得：<strong>b = a × (1 + n)</strong></li>
+        </ul>
+        <p>個人預算條件變成：</p>
+        <ul>
+          <li>c<sub>t</sub><sup>年輕</sup> + a + s<sub>t</sub> = y</li>
+          <li>
+            c<sub>t+1</sub><sup>老年</sup> = b + (1 + r<sub>t+1</sub>) × s<sub
+              >t</sub
+            >
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>五、動態一般均衡條件</h2>
+        <ul>
+          <li>
+            總資本 K<sub>t</sub> 來自所有年輕人的儲蓄 →
+            <strong>K<sub>t</sub> = S<sub>t</sub></strong>
+          </li>
+          <li>
+            利率由生產函數決定 →
+            <strong>r<sub>t</sub> = f'(K<sub>t</sub>)</strong>
+          </li>
+          <li>
+            資源限制式：
+            <p>
+              <strong
+                >年輕消費 × N<sub>t</sub> + 老年消費 × N<sub>t-1</sub> +
+                政府支出 ≤ 總產出</strong
+              >
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>六、圖解建議（可由 AI 協助繪圖）</h2>
+        <ol>
+          <li>畫出跨期預算線，標示 PAYG 稅收與補貼如何改變預算約束。</li>
+          <li>畫出 PAYG 的現金流動圖（箭頭從年輕人 → 政府 → 老年人）。</li>
+          <li>畫出 OLG 動態圖（Phase Diagram），找出穩定均衡點（r = n）。</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>七、延伸問題探討</h2>
+        <ul>
+          <li>
+            模擬：當人口成長率 <strong>n 下降</strong>，PAYG 制度會破產嗎？
+          </li>
+          <li>模擬：改採 Fully-funded（完全資本化）制度能否對抗人口老化？</li>
+          <li>
+            思考：若儲蓄報酬率 <strong>r &lt; n</strong>，PAYG 是否仍具永續性？
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>
